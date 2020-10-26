@@ -1,7 +1,7 @@
 {
-  "name": "@m1burn/rxjs",
-  "version": "6.6.3",
-  "description": "Reactive Extensions for modern JavaScript",
+  "name": "m1burn-rxjs",
+  "version": "6.6.4",
+  "description": "Personal fork of Reactive Extensions. Please use official package - https://www.npmjs.com/package/rxjs",
   "main": "index.js",
   "sideEffects": false,
   "config": {
@@ -129,52 +129,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactivex/rxjs.git"
+    "url": "https://github.com/m1burn/rxjs.git"
   },
-  "keywords": [
-    "Rx",
-    "RxJS",
-    "ReactiveX",
-    "ReactiveExtensions",
-    "Streams",
-    "Observables",
-    "Observable",
-    "Stream",
-    "ES6",
-    "ES2015"
-  ],
-  "author": "Ben Lesh <ben@benlesh.com>",
-  "contributors": [
-    {
-      "name": "Ben Lesh",
-      "email": "ben@benlesh.com"
-    },
-    {
-      "name": "Paul Taylor",
-      "email": "paul.e.taylor@me.com"
-    },
-    {
-      "name": "Jeff Cross",
-      "email": "crossj@google.com"
-    },
-    {
-      "name": "Matthew Podwysocki",
-      "email": "matthewp@microsoft.com"
-    },
-    {
-      "name": "OJ Kwon",
-      "email": "kwon.ohjoong@gmail.com"
-    },
-    {
-      "name": "Andre Staltz",
-      "email": "andre@staltz.com"
-    }
-  ],
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/ReactiveX/RxJS/issues"
-  },
-  "homepage": "https://github.com/ReactiveX/RxJS",
   "dependencies": {
     "tslib": "^1.9.0"
   },
