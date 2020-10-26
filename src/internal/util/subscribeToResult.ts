@@ -2,6 +2,7 @@ import { Subscription } from '../Subscription';
 import { InnerSubscriber } from '../InnerSubscriber';
 import { OuterSubscriber } from '../OuterSubscriber';
 import { Subscriber } from '../Subscriber';
+import { isObservable } from './isObservable';
 import { subscribeTo } from './subscribeTo';
 import { Observable } from '../Observable';
 
@@ -30,8 +31,8 @@ export function subscribeToResult<T, R>(
   if (innerSubscriber.closed) {
     return undefined;
   }
-  if (result instanceof Observable) {
-    return result.subscribe(innerSubscriber);
+  if (isObservable(result)) {
+    return (result as Observable<R>).subscribe(innerSubscriber);
   }
   return subscribeTo(result)(innerSubscriber) as Subscription;
 }

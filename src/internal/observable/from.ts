@@ -1,4 +1,5 @@
 import { Observable } from '../Observable';
+import { isObservable } from '../util/isObservable';
 import { subscribeTo } from '../util/subscribeTo';
 import { ObservableInput, SchedulerLike, ObservedValueOf } from '../types';
 import { scheduled } from '../scheduled/scheduled';
@@ -108,8 +109,8 @@ export function from<O extends ObservableInput<any>>(input: O, scheduler: Schedu
  */
 export function from<T>(input: ObservableInput<T>, scheduler?: SchedulerLike): Observable<T> {
   if (!scheduler) {
-    if (input instanceof Observable) {
-      return input;
+    if (isObservable(input)) {
+      return input as Observable<T>;
     }
     return new Observable<T>(subscribeTo(input));
   } else {

@@ -2,6 +2,7 @@
 import { Subscription } from './Subscription';
 import { Subscriber } from './Subscriber';
 import { Observable } from './Observable';
+import { isObservable } from './util/isObservable';
 import { subscribeTo } from './util/subscribeTo';
 
 interface SimpleOuterSubscriberLike<T> {
@@ -107,7 +108,7 @@ export function innerSubscribe(result: any, innerSubscriber: Subscriber<any>): S
   if (innerSubscriber.closed) {
     return undefined;
   }
-  if (result instanceof Observable) {
+  if (isObservable(result)) {
     return result.subscribe(innerSubscriber);
   }
   return subscribeTo(result)(innerSubscriber) as Subscription;

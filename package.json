@@ -1,5 +1,5 @@
 {
-  "name": "@reactivex/rxjs",
+  "name": "@m1burn/rxjs",
   "version": "6.6.3",
   "description": "Reactive Extensions for modern JavaScript",
   "main": "index.js",
